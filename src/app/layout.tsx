@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: "%s | Orejitas",
     default: "Orejitas",
   },
-  description: "Orejitas, ayudemos a encontrar un hogar a los peluditos",
+  description: "Orejitas, ayudemos a encontrar un hogar a los peluditos. Tu nuevo amigo te espera ahi afuera.",
   icons: {
     icon: "/favicon.png", // Ruta del favicon
     shortcut: "/favicon.png", // Para navegadores que usan el tipo "shortcut icon"
@@ -31,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
