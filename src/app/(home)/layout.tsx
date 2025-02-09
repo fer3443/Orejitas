@@ -1,4 +1,4 @@
-import { TopMenu } from "@/components";
+import { Sidebar, TopMenu } from "@/components";
 
 export default function HomeLayout({
  children
@@ -8,6 +8,7 @@ export default function HomeLayout({
   return (
     <div className="min-h-screen">
       <TopMenu/>
+      <Sidebar/>
      {children}
     </div>
   );
