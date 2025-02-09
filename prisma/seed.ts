@@ -2,7 +2,7 @@ import prisma from "@/lib/prisma"
 
 async function main() {
   
-  
+  console.log('seed executed')
 }
 main()
   .then(async () => {

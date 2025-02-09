@@ -1,8 +1,17 @@
+import { notFound } from "next/navigation";
 
-export default function SpeciesPage() {
+interface Props {
+  params: Promise<{
+    id:string;
+  }>
+}
+
+export default async function SpeciesPage({params}:Props) {
+  const {id} = await params;
+
   return (
     <div>
-      <h1>Hello Page</h1>
+      <h1>Species Page {id}</h1>
     </div>
   );
 }

@@ -1,3 +1,4 @@
+import { TopMenu } from "@/components";
 
 export default function HomeLayout({
  children
@@ -5,7 +6,8 @@ export default function HomeLayout({
  children: React.ReactNode;
 }) {
   return (
-    <div className="bg-turquoise-100 min-h-screen">
+    <div className="min-h-screen">
+      <TopMenu/>
      {children}
     </div>
   );
