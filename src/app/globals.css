@@ -4,6 +4,20 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-start-rgb))
+    )
+    rgb(var(--background-end-rgb));
+}
+
+:root {
+  --primary: #20aca4; /* Color principal */
+  --foreground-rgb: 10, 45, 42; /* Un tono oscuro derivado para el texto */
+  --background-start-rgb: 186, 230, 227; /* Un tono claro, armónico con el primary */
+  --background-end-rgb: 240, 255, 254; /* Un tono aún más claro para transiciones suaves */
 }
 
 @layer base {
@@ -72,13 +86,21 @@ body {
 }
 
 @keyframes fadeIn {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
-} 
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 @-webkit-keyframes fadeIn {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .fade-in {
