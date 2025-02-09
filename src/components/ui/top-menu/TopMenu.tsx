@@ -1,9 +1,12 @@
+"use client";
+
+import { useUiStore } from "@/store";
 import Link from "next/link";
-import { PiDogFill } from "react-icons/pi";
-import { FaRegUser } from "react-icons/fa6";
 import React from "react";
+import { FaRegUser } from "react-icons/fa6";
 
 export const TopMenu = () => {
+  const openMenu = useUiStore((state) => state.openSideMenu);
   return (
     <nav className="flex justify-between items-center my-3 px-5 w-full ">
       {/*Logo */}
@@ -46,13 +49,16 @@ export const TopMenu = () => {
       <ul className="flex items-center space-x-4">
         <li>
           <Link href="/auth/login">
-            <FaRegUser className="p-2 rounded antialiased transition-all hover:bg-gray-100" size={35} />
+            <FaRegUser
+              className="p-2 rounded antialiased transition-all hover:bg-gray-100"
+              size={35}
+            />
           </Link>
         </li>
         <li>
-          <Link href="/about">
-            <PiDogFill className="p-2 rounded antialiased transition-all hover:bg-gray-100" size={35} />
-          </Link>
+          <button className="py-2 px-4 antialiased transition-all cursor-pointer" onClick={() => openMenu()}>
+            Menu
+          </button>
         </li>
       </ul>
     </nav>
