@@ -1,8 +1,9 @@
 export interface Pet {
-  // id: string;
+  id?: string;
   name: string;
-  specie: string; // 'dog' or 'cat'
-  gender: string; // 'M', 'F', 'O'
+  age:string;
+  specie: Species; // 'dog' or 'cat'
+  gender: Gender; // 'M', 'F', 'O'
   slug:string;
   status: string; // 'adoption', 'lost', 'found'
   description: string;
@@ -13,5 +14,5 @@ export interface Pet {
   petImage: string[];
 }
 
-export type Species = "dog" | "cat";
+export type Species = "dog" | "cat" | "other";
 export type Gender = "M" | "F" | "O";
