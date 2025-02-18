@@ -56,7 +56,7 @@ export const TopMenu = () => {
           </Link>
         </li>
         <li>
-          <button className="py-2 px-4 antialiased transition-all cursor-pointer" onClick={() => openMenu()}>
+          <button className="py-2 px-4 border rounded-xl bg-linear-to-b/decreasing from-cyan-500 to-blue-500 cursor-pointer" onClick={() => openMenu()}>
             Menu
           </button>
         </li>
