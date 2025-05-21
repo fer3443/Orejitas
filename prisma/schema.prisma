@@ -13,3 +13,45 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model User {
+  id        String     @id @default(uuid())
+  name      String
+  email     String     @unique
+  password  String
+  role      Role       @default(USER) // Enum: ADMIN o USER
+  isBlocked Boolean    @default(false) // para suspender cuentas
+  posts     PetPost[]  // relación 1:N con PetPost
+  createdAt DateTime   @default(now())
+}
+
+model PetPost {
+  id          String   @id @default(uuid())
+  title       String
+  description String
+  image       String
+  status      PostStatus
+  petType     PetType
+  location    String
+  resolved    Boolean  @default(false)
+  user        User     @relation(fields: [userId], references: [id])
+  userId      String
+  createdAt   DateTime @default(now())
+}
+
+enum PostStatus {
+  lost
+  found
+  adoption
+}
+
+enum PetType {
+  dog
+  cat
+  other
+}
+
+enum Role {
+  ADMIN
+  USER
+}
