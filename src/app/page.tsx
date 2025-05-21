@@ -1,7 +1,8 @@
+
 export default function HomePage() {
   return (
-   <main>
-    <h1>Orejitas</h1>
-   </main>
+    <div>
+      <h1>Hello Page</h1>
+    </div>
   );
 }
