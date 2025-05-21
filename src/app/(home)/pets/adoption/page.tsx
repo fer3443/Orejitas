@@ -1,4 +1,5 @@
-export default function LoginPage() {
+
+export default function AdoptionPage() {
   return (
     <div>
       <h1>Hello Page</h1>
