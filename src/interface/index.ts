@@ -1,3 +1,5 @@
-export * from '@/interface/schemas/loginSchema'
-export * from '@/interface/pet.interface'
-export * from '@/interface/user.interface'
+export * from './register.schema';
+export * from './login.schema';
+
+export * from './user.interface';
+export * from './pet-post.interface';
